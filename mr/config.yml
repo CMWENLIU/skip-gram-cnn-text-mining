@@ -7,7 +7,7 @@ word_embeddings:
     dimension: 300
     binary: True
   glove:
-    path: ~/repos/skip-gram-cnn-text-mining/emb/allbbc.news.vec100.txt
+    path: "~/repos/skip-gram-cnn-text-mining/emb/allbbc.news.vec100.txt"
     dimension: 100
     length: 
 
