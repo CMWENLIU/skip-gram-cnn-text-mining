@@ -20,7 +20,7 @@ tf.flags.DEFINE_float("dev_sample_percentage", .2, "Percentage of the training d
 
 # Model Hyperparameters
 tf.flags.DEFINE_boolean("enable_word_embeddings", True, "Enable/disable the word embedding (default: True)")
-tf.flags.DEFINE_integer("embedding_dim", 128, "Dimensionality of character embedding (default: 128)")
+tf.flags.DEFINE_integer("embedding_dim", 100, "Dimensionality of character embedding (default: 128)")
 tf.flags.DEFINE_string("filter_sizes", "3,4,5", "Comma-separated filter sizes (default: '3,4,5')")
 tf.flags.DEFINE_integer("num_filters", 64, "Number of filters per filter size (default: 128)")
 tf.flags.DEFINE_float("dropout_keep_prob", 0.5, "Dropout keep probability (default: 0.5)")
@@ -95,6 +95,9 @@ print("Vocabulary Size: {:d}".format(len(vocab_processor.vocabulary_)))
 print("Train/Dev split: {:d}/{:d}".format(len(y_train), len(y_dev)))
 print('Training Shape of x and y are: ', x_train.shape, y_train.shape)
 print('Deviatio Shape of x and y are: ', x_dev.shape, y_dev.shape)
+print('Max document length is: ', max_document_length)
+print('Embeding dimension is: ', embedding_dimension)
+
 start = time.time() #record the time of start training
 # Training
 # ==================================================
