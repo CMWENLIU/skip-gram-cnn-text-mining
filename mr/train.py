@@ -93,7 +93,8 @@ x_train, x_dev = x_shuffled[:dev_sample_index], x_shuffled[dev_sample_index:]
 y_train, y_dev = y_shuffled[:dev_sample_index], y_shuffled[dev_sample_index:]
 print("Vocabulary Size: {:d}".format(len(vocab_processor.vocabulary_)))
 print("Train/Dev split: {:d}/{:d}".format(len(y_train), len(y_dev)))
-
+print('Training Shape of x and y are: ', x_train.shape, y_train.shape)
+print('Deviatio Shape of x and y are: ', x_dev.shape, y_dev.shape)
 start = time.time() #record the time of start training
 # Training
 # ==================================================
