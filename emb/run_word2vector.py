@@ -2,18 +2,18 @@ from gensim.models import Word2Vec, KeyedVectors
 from gensim.models.word2vec import LineSentence
 import os
 
-data_sets = ['/home/xxliu10/bigdata/bbcready/allbbc.news',
-             #'/home/xxliu10/bigdata/collectready/allmk.news',
+data_sets = ['/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1.txt',
+             '/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1_set2.txt'
              #'/home/xxliu10/bigdata/bbc_mk.news',
              #'/home/xxliu10/bigdata/tweets/weets1.txt.new',
              #'/home/xxliu10/bigdata/bbc_tweets.news']
 
 for data in data_sets:
 	head, filename = os.path.split(data)
-	filename += '.vec200.txt'
-	filepath = '/home/xxliu10/bigdata/'	+ filename
+	filename += '.v100.vec'
+	filepath = head	+ filename
 	sentences = LineSentence(data)
-	model = Word2Vec(sentences, size=200, window=5, min_count=5, workers=4)
+	model = Word2Vec(sentences, size=100, window=5, min_count=5, workers=4)
 	model.wv.save_word2vec_format(filepath, binary=False)
 	print(filename + ' has been finished!')
 #sentences = [["cat", "say", "meow"], ["dog", "say", "woof"]]
