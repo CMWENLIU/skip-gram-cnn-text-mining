@@ -3,7 +3,7 @@ from gensim.models.word2vec import LineSentence
 import os
 
 data_sets = ['/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1.txt',
-             '/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1_set2.txt'
+             '/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1_set2.txt']
              #'/home/xxliu10/bigdata/bbc_mk.news',
              #'/home/xxliu10/bigdata/tweets/weets1.txt.new',
              #'/home/xxliu10/bigdata/bbc_tweets.news']
