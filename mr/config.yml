@@ -7,7 +7,7 @@ word_embeddings:
     dimension: 300
     binary: True
   glove:
-    path: "/home/cc/bigdata/dataset1.txt.v100.vec"
+    path: 'data/set1.txt.vec100'
     dimension: 100
     length: 
 
