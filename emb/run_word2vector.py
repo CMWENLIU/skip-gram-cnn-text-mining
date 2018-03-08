@@ -10,8 +10,8 @@ data_sets = ['/home/cc/repos/skip-gram-cnn-text-mining/mr/data/set1.txt',
 
 for data in data_sets:
 	head, filename = os.path.split(data)
-	filename += '.v100.vec'
-	filepath = head	+ filename
+	filename += '.vec100'
+	filepath = os.path.join(head, filename)
 	sentences = LineSentence(data)
 	model = Word2Vec(sentences, size=100, window=5, min_count=5, workers=4)
 	model.wv.save_word2vec_format(filepath, binary=False)
