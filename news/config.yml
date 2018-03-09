@@ -7,29 +7,28 @@ word_embeddings:
     dimension: 300
     binary: True
   glove:
-    path: '/home/xxliu10/bigdata/wordemb/vec_200.txt'
-    dimension: 200
+    path: 'data/set1.txt.vec100'
+    dimension: 100
     length:
 
 datasets:
-  # Support currently 3 datasets: mrpolarity, 20newsgroup and localdata
   default: textinline
   textinline:
     business_data_file:
-      path: "/home/xxliu10/bigdata/allNews/bbcready/b.txt"
-      info: "Data source for the business data"
+      path: "data/1.txt"
+      info: "Data source for data 1"
     enter_data_file:
-      path: "/home/xxliu10/bigdata/allNews/bbcready/e.txt"
-      info: "Data source for the enter data"
+      path: "data/2.txt"
+      info: "Data source for data 2"
     politics_data_file:
-      path: "/home/xxliu10/bigdata/allNews/bbcready/p.txt"
-      info: "Data source for the politics data"
+      path: "data/3.txt"
+      info: "Data source for data 3"
     sport_data_file:
-      path: "/home/xxliu10/bigdata/allNews/bbcready/s.txt"
-      info: "Data source for the sport data"
+      path: "data/4.txt"
+      info: "Data source for data 4"
     tech_data_file:
-      path: "/home/xxliu10/bigdata/allNews/bbcready/t.txt"
-      info: "Data source for the tech data"
+      path: "data/5.txt"
+      info: "Data source for data 5"
   20newsgroup:
     # The dataset includes following 20 newsgroups:
     # alt.atheism, comp.windows.x, rec.sport.hockey, soc.religion.christian
